@@ -1,0 +1,32 @@
+<script id="tmpl-Contact" type="text/html">
+	<div class="Contact">
+		<div class="panel">
+			<div class="panel-header">
+				<button class="btn btn-primary action btnCreate">Create Contact</button>
+				<h1>Contacts</h1>
+			</div>
+			<div class="panel-content">
+				<ul>
+					{{#each contacts}}
+						<li data-obj_type="contact" data-obj.id="{{id}}"  data-obj.name="{{name}}">
+							<div class="info">
+								<span><strong>Name:</strong> {{name}}</span>
+								<span><strong>Address:</strong> {{address}}</span>
+								<span><strong>Phone:</strong> {{phoneNum}}</span>
+							</div>
+							<div class="group">
+								<strong>Groups:</strong> 
+								{{#each groups}}
+									<span class="groupName">{{name}}</span>
+								{{/each}} 
+								<span class="btn btn-mini btn-primary btnAddGroups">Sign Groups</span>
+								<span class="btn btn-mini btn-danger btnDelete floatRight">Del</span>
+								<span class="btn btn-mini btn-primary btnEdit floatRight">Edit</span>
+							</div>
+						</li>	
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>  
+</script>

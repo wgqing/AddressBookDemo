@@ -1,0 +1,24 @@
+<script id="tmpl-Group" type="text/html">
+	<div class="Group">
+		<div class="panel">
+			<div class="panel-header">
+				<button class="btn btn-primary action btnCreate">Create Group</button>
+				<h1>Groups</h1>
+			</div>
+			<div class="panel-content">
+				<ul>
+					<li data-obj_type="group" data-obj.id="all">
+						<span class="all name selected">(All Groups)</span>
+					</li>
+					{{#each groups}}
+						<li data-obj_type="group" data-obj.id="{{id}}">
+							<span class="name">{{name}}</span>
+							<span class="btn btn-mini btn-danger btnDelete">Del</span>
+							<span class="btn btn-mini btn-primary btnEdit">Edit</span>
+						</li>	
+					{{/each}}
+				</ul>
+			</div>
+		</div>
+	</div>  
+</script>
