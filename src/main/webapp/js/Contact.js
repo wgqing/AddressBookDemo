@@ -25,30 +25,20 @@
 				brite.display("ContactSave", null, {});
 			},
 			"click; .btnEdit": function(e){
-				var view = this;
-				var $e = view.$el;
 				var $target = $(e.currentTarget);
 				var id = $target.closest("li").attr("data-obj.id");
 				brite.display("ContactSave",null, {id:id});
 			},
 			"click; .btnDelete": function(e){
-				var view = this;
-				var $e = view.$el;
 				var $target = $(e.currentTarget);
 				var id = $target.closest("li").attr("data-obj.id");
 				contactDao.deleteContact(id);
 			},
 			"click; .btnAddGroups": function(e){
-				var view = this;
-				var $e = view.$el;
 				var $target = $(e.currentTarget);
 				var id = $target.closest("li").attr("data-obj.id");
 				var name = $target.closest("li").attr("data-obj.name");
-				
 				brite.display("ContactGroup",null, {id:id, name:name});
-			},
-			"click; .btnRemoveGroup": function(e){
-				
 			}
         },
         
